@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:googleservices/home.dart';
+import 'package:googleservices/details_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
