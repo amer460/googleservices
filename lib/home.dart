@@ -27,7 +27,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Google Services"),
+          backgroundColor: Colors.white,
+          title: Padding(
+            padding: const EdgeInsets.all(100.0),
+            child: Image.asset('assets/logo.png'),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
