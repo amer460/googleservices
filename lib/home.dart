@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:googleservices/details_screen.dart';
 
 class Home extends StatelessWidget {
   final List<String> _images = [
@@ -44,8 +45,13 @@ class Home extends StatelessWidget {
 
   Widget _getChild(BuildContext context, int index) {
     return InkWell(
-      onTap: () {},
-          child: Container(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailsScreen(_titles[index])));
+      },
+      child: Container(
         child: Center(
           child: Column(
             children: [

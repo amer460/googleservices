@@ -1,5 +1,6 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
+import 'package:googleservices/home.dart';
 import 'package:googleservices/size_config.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -27,14 +28,15 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   Container(
                     //width: SizeConfig.screenWidth,
                     child: Image.asset(
-                      'assets/${widget.naslov}.png',
+                      'assets/${widget.naslov.toLowerCase()}.png',
                     ),
                   ),
                   IconButton(
                     alignment: Alignment.topLeft,
                     icon: Icon(Icons.arrow_back_rounded, size: 40),
                     onPressed: () {
-                      //Navigator.push(context,MaterialPageRoute(builder: (context) => MainScreen()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Home()));
                     },
                     color: Colors.black,
                   ),
